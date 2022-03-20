@@ -1,6 +1,8 @@
 # 4951-Project-2ndPart
-Update date: Mar 13 2022
+Update date: Mar 20 2022
 
+## Second Week:
+See readme.md in different folders
 
 ## First week:
 
