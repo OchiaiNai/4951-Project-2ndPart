@@ -1,5 +1,12 @@
 # 4951-Project-2ndPart
-Update date: Mar 20 2022
+
+Update date: Mar 30 2022
+
+## Third Week:
+Finish Wechat Miniprogram
+Note: cloud function that associated to feedback doesn`t work 
+History and View my apply still need to be fixed
+Ongoing Visits Page: asynchronous problems
 
 ## Second Week:
 See readme.md in different folders
