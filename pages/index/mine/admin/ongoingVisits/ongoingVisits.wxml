@@ -1,9 +1,0 @@
-<!--pages/index/mine/admin/ongoingVisits/ongoingVisits.wxml-->
-<view class="container">
-    <van-grid>
-    <van-grid-item icon="friends" text="Wang Zhikai" />
-    <van-grid-item icon="friends" text="He Jiaxin" />
-    <van-grid-item icon="friends" text="Cui Hao" />
-    <van-grid-item icon="friends" text="Li Xiang" />
-    </van-grid>
-</view>

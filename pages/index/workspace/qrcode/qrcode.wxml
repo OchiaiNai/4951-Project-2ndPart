@@ -1,5 +1,0 @@
-<!--pages/index/workspace/qrcode/qrcode.wxml-->
-<view class="container">
-    <label class="title"> Access QR Code</label>
-    <canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas'></canvas>
-</view>
