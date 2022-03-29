@@ -1,0 +1,5 @@
+<!--pages/index/workspace/feedback/feedback.wxml-->
+<input style="width: 660rpx; height: 422rpx; display: block; box-sizing: border-box; position: relative; left: 38rpx; top: 18rpx"  placeholder="Please enter feedback"/>
+    
+    <van-button color="#8A2BE2" type="primary" size="large" class="btn" bind:click="submit" style="position: relative; left: 195rpx; top: 794rpx; width: 346rpx; height: 92rpx; display: block; box-sizing: border-box" >sumbit</van-button>
+

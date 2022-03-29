@@ -1,0 +1,25 @@
+/* pages/index/workspace/form/form.wxss */
+Page{
+    background-color: white;
+}
+.picker1{
+    position: relative; 
+    left: 20rpx; 
+    width: 676rpx; 
+    height: 96rpx; 
+    display: block; 
+    box-sizing: border-box;
+    margin-top: 3%
+}
+.field{
+    margin-top:3%
+}
+.btn{
+    width: 676rpx; 
+    height: 96rpx; 
+    display: block; 
+    box-sizing: border-box; 
+    left: 20rpx; 
+    top: 128rpx; 
+    position: relative
+}

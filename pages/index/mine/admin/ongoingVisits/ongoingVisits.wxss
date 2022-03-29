@@ -1,0 +1,4 @@
+/* pages/index/mine/admin/ongoingVisits/ongoingVisits.wxss */
+Page{
+    background-color: white;
+}

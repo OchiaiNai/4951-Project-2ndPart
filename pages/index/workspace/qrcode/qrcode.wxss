@@ -1,0 +1,15 @@
+/* pages/index/workspace/qrcode/qrcode.wxss */
+Page{
+    background-color: white;
+}
+.canvas{
+    position: relative;
+    top:140rpx;
+}
+.title{
+    position: relative;
+    top: 60rpx;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-style: oblique;
+}

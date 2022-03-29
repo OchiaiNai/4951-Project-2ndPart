@@ -1,0 +1,2 @@
+<!--pages/index/mine/admin/viewFeedback/viewFeedback.wxml-->
+<van-empty image="search" description="No Data Found" />
