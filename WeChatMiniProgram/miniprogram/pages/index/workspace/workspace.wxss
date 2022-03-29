@@ -1,0 +1,84 @@
+/* pages/index/workspace/workspace.wxss */
+Page{
+    background-color: white;
+}
+.header{
+    margin-top: 10%;
+    position: left;
+}
+.divline{
+    margin-top: 3%;
+    background: grey;
+    width: 100%;
+    height: 5rpx;
+}
+.container{
+    display: flex;
+    background-color: white;
+    height: 100%;
+    border: none;
+}
+.formBtn{
+    position: relative;
+    left: -127rpx;
+    top: 74rpx;
+    width: 140rpx;
+    height: 180rpx;
+    display: block;
+    box-sizing: border-box;
+}
+.formText{
+    position: relative;
+    text-align: center;
+    left: 23rpx;
+    top: -8rpx;
+    font-size: 12pt;
+}
+.qrcodeBtn{
+    position: relative;
+    left: 124rpx;
+    top: -106rpx;
+    width: 140rpx;
+    height: 180rpx;
+    display: block;
+    box-sizing: border-box;
+}
+.formText{
+    position: relative;
+    text-align: center;
+    left: 0rpx;
+    top: -8rpx;
+    font-size: 12pt;
+}
+.historyBtn{
+    position: relative;
+    left: -127rpx;
+    top: -26rpx;
+    width: 140rpx;
+    height: 180rpx;
+    display: block;
+    box-sizing: border-box;
+}
+.historyText{
+    position: relative;
+    text-align: center;
+    left: 6rpx;
+    top: -8rpx;
+    font-size: 12pt;
+}
+.feedbackBtn{
+    position: relative;
+    left: 124rpx;
+    top: -206rpx;
+    width: 140rpx;
+    height: 180rpx;
+    display: block;
+    box-sizing: border-box;
+}
+.feedbackText{
+    position: relative;
+    text-align: center;
+    left: -13rpx;
+    top: -8rpx;
+    font-size: 12pt;
+}

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="login-icon">
+    <image class="login-img" src="../../images/Kean2.png"></image>
+  </view>
+  <view class="header">
+      <text>WKU Dormitory 
+      Management System</text>
+  </view>
+
+    <!--按钮-->
+    <view class="loginBtnView">
+      <button class="navigateBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="getUserProfile">login</button>
+    </view>
+</view>

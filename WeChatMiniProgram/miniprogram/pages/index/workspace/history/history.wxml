@@ -1,0 +1,2 @@
+<!--pages/index/workspace/history/history.wxml-->
+<van-empty image="search" description="No Data Found" />
