@@ -1,5 +1,30 @@
-<!--pages/index/workspace/feedback/feedback.wxml-->
-<input style="width: 660rpx; height: 422rpx; display: block; box-sizing: border-box; position: relative; left: 38rpx; top: 18rpx"  placeholder="Please enter feedback"/>
-    
-    <van-button color="#8A2BE2" type="primary" size="large" class="btn" bind:click="submit" style="position: relative; left: 195rpx; top: 794rpx; width: 346rpx; height: 92rpx; display: block; box-sizing: border-box" >sumbit</van-button>
-
+<!--pages/feedback/feedback.wxml-->
+<view wx:if="{{step==1}}" class="nocate">
+  <image style="height: 240rpx; margin-top:100rpx;" mode="aspectFit" src="../../images/feedbacktype1.png" bindtap="handleType1"></image>
+  <view style="font-size: 38rpx;">System Feedback</view>
+  <image style="height: 240rpx; margin-top: 110rpx; background: transparent" mode="aspectFit" src="../../images/feedbacktype2.png" bindtap="handleType2"></image>
+  <view style="font-size: 38rpx;">Program Debug</view>
+</view>
+<view wx:if="{{step==2}}">
+    <view class="page-section">
+      <view class="page-section-title">Please enter your feedback（100 words）</view>
+      <view class="textarea-wrp">
+        <textarea style="height: 8em" placeholder="{{hint}}" bindinput="handleMessageChange" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">Contact（50 words）</view>
+      <view class="textarea-wrp">
+        <input class="textarea-wrp" placeholder="(optional)" bindinput="handleContactChange" />
+      </view>
+    </view>
+    <view style="height: 12px;"></view>
+    <view class="page-section">
+      <view class="submit-button" style="background: {{color}};" bindtap="handleSubmit">{{submitText}}</view>
+      <view class="submit-button" style="background: #aaaaaa;" bindtap="handleBack">Back</view>
+    </view>
+</view>
+<view wx:if="{{step==3}}" class="success">
+  <view class="congratulation"><icon type="success" size="32" class="success-icon"/>Successfully Submitted!</view>
+  <view class="submit-button" style="background: #aaaaaa;" bindtap="handleBack">Back</view>
+</view>

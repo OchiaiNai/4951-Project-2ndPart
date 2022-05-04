@@ -17,7 +17,7 @@
     readonly="{{readonlyStatus}}"
     size="large" 
     /> 
-    <van-cell class="picker1"
+    <van-cell style="position: relative; left: -22rpx; top: -22rpx; width: 675rpx; height: 94rpx; display: block; box-sizing: border-box"  class="picker1"
     value="{{gender}}"
     title="Gender"
     bind:click="popupGender"
@@ -26,7 +26,7 @@
     readonly="{{readonlyStatus}}"
     size="large"
     />
-    <van-field class="field"
+    <van-field style="width: 718rpx; height: 94rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx"  class="field"
     model:value="{{phone}}"
     label="Phone"
     required="{{requiredStatus}}"
@@ -34,7 +34,7 @@
     size="large" 
     />
     <!--Choose Dormitory-->
-    <van-cell class="picker1"
+    <van-cell style="position: relative; left: -22rpx; top: -5rpx"  class="picker1"
     title="{{chooseDormTitleValue}}"
     is-link="{{linkstatus1}}"
     value="{{dorm}}"
@@ -79,5 +79,5 @@
 
       
     <!--Button-->
-    <van-button disabled="{{disabledValue}}" color="#8A2BE2" type="primary" size="large" class="btn" bind:click="submit" >sumbit</van-button>
+    <van-button disabled="{{disabledValue}}" color="#8A2BE2" type="primary" size="large" class="btn" bind:click="submit"  style="position: relative; left: 22rpx; top: 127rpx">Sumbit</van-button>
 </view>

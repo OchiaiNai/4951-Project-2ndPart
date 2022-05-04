@@ -2,6 +2,7 @@
 const QRCode = require('../../../../utils/weapp-qrcode.js');
 const app = getApp();
 import rpx2px from '../../../../utils/rpx2px.js';
+import util from '../../../../utils/util.js';
 const qrcodeWidth = rpx2px(600);
 let qrcode;
 Page({
@@ -23,8 +24,26 @@ Page({
         text:""
 
     },
+    // checkstatus: function(){
+    //     var status = true
+    //     if (new Date() > this.data.leaveTime){
+    //         status = false
+    //     }
+    // },
     connect: function(){
-        var connected = this.data.visitTime + "," + this.data.name + "," + String(this.data.id) + "," + String(this.data.phone) + "," + this.data.visitDorm + "," + this.data.visitRoom + "," + this.data.reason + "," + this.data.leaveTime;
+        var connected = 
+        "Visit Time:" + "\n" 
+        + this.data.visitTime + "\n" 
+        + "to" + "\n"
+        + this.data.leaveTime + "\n"
+        + this.data.name + "\n" 
+        + String(this.data.id) + "\n" 
+        + String(this.data.phone) + "\n" 
+        + this.data.visitDorm + "\n" 
+        + this.data.visitRoom + "\n" 
+        + "for purpose of:" + "\n"
+        + this.data.reason + "\n" 
+
         this.setData({
             text: connected
         })
@@ -35,8 +54,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        var time = util.formatTime(new Date())
+        var status = (new Date() < this.data.leaveTime)
         this.setData({
-            openid: app.globalData.openid
+            openid: app.globalData.openid,
+            time: time,
+            status: status?"AVAILABLE":"EXPIRED"
         })
         wx.cloud.callFunction({
             name:"getvisitqrcodeinfo",
@@ -44,7 +67,6 @@ Page({
                 _openid: this.data.openid
             },  
             complete: res =>{
-                if(res.result.data[0].scanned == false){
                 this.setData({
                     name: res.result.data[0].name,
                     id: res.result.data[0].id,
@@ -55,7 +77,9 @@ Page({
                     visitTime: res.result.data[0].visitTime,
                     leaveTime: res.result.data[0].leaveTime
                 }),
-                this.connect(),
+                this.connect()
+                if(res.result.data[0].scanned == false && status == true){
+                
                 qrcode = new QRCode('canvas', {
                     text: this.data.text,
                     width: this.data.qrcodeWidth,
@@ -66,7 +90,7 @@ Page({
                 })         
                 }else{
                     qrcode = new QRCode('canvas', {
-                        text: null,
+                        text: this.data.text,
                         width: this.data.qrcodeWidth,
                         height: this.data.qrcodeWidth,
                         colorDark: "#EA1F47",

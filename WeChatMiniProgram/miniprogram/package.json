@@ -1,14 +1,24 @@
 {
   "name": "miniprogram",
   "version": "1.0.0",
-  "description": "",
+  "description": "miniprogram folder",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Eric",
   "license": "ISC",
   "dependencies": {
-    "@vant/weapp": "^1.10.2"
-  }
+    "@vant/weapp": "^1.10.3",
+    "clipboard": "^2.0.11",
+    "miniprogram-sm-crypto": "^0.3.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OchiaiNai/4951-Project-2ndPart.git#main"
+  },
+  "bugs": {
+    "url": "https://github.com/OchiaiNai/4951-Project-2ndPart/issues"
+  },
+  "homepage": "https://github.com/OchiaiNai/4951-Project-2ndPart/tree/main#readme"
 }
