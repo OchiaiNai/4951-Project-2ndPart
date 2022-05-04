@@ -24,7 +24,19 @@ Page({
 
     },
     connect: function(){
-        var connected = this.data.visitTime + "," + this.data.name + "," + String(this.data.id) + "," + String(this.data.phone) + "," + this.data.visitDorm + "," + this.data.visitRoom + "," + this.data.reason + "," + this.data.leaveTime;
+        var connected = 
+        "Visit Time:" + "\n" 
+        + this.data.visitTime + "\n" 
+        + "to" + "\n"
+        + this.data.leaveTime + "\n"
+        + this.data.name + "\n" 
+        + String(this.data.id) + "\n" 
+        + String(this.data.phone) + "\n" 
+        + this.data.visitDorm + "\n" 
+        + this.data.visitRoom + "\n" 
+        + "for purpose of:" + "\n"
+        + this.data.reason + "\n" 
+
         this.setData({
             text: connected
         })

@@ -66,9 +66,19 @@ Page({
         var gender = this.data.gender
         var room = this.data.room
         var phone = this.data.phone
-        if (dorm =="" || name == "" || id == "" || gender == "" || room == "" || phone == "" ){
+        var namePattern = /^[\u4e00-\u9fa5A-Za-z]{0,}$/
+        var roomPattern = /^[\u4E00-\u9FA5]{1}[A-D]{1}[0-9]{3}$/
+        var idPattern = /^\d{7}$/
+        var phonePattern = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/
+        if (dorm =="" || name == "" || id == "" || gender == "" || room == "" || phone == "" ){ //判断是否完成设置的条件句，条件为全值为空
             Dialog.alert({
-                message: 'Please fill the Required data',
+                message: 'Please fill the Required data.',
+                theme: 'round-button',
+                confirmButtonText:'OK'
+              })
+        }else if(!namePattern.test(name) || !roomPattern.test(room) || !idPattern.test(id) || !phonePattern.test(phone)){
+            Dialog.alert({
+                message: 'You have '+ !namePattern.test(name) + !roomPattern.test(room) + !idPattern.test(id) + !phonePattern.test(phone) + 'format error(s), please check',
                 theme: 'round-button',
                 confirmButtonText:'OK'
               })
@@ -112,8 +122,8 @@ Page({
             complete: res =>{
                 console.log(res)
                 this.setData({
-                    readonlyStatus: true,
-                    disabledValue: true,
+                    readonlyStatus: true,   //此处更改可读性
+                    disabledValue: true,    //此处更改是否关闭值
                     requiredStatus: false,
                     room: res.result.data[0].room,
                     name: res.result.data[0].name,

@@ -1,7 +1,7 @@
 <!--pages/index/workspace/workspace.wxml-->
 <view class="container">
-    <image src="../../../images/Kean2.png" style="position: relative; width: 430rpx; height: 400rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
-    <label class="header">
+    <image src="../../../images/Kean2.png" style="position: relative; width: 275rpx; height: 249rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
+    <label class="header" style="width: 544rpx; height: 99rpx; display: block; box-sizing: border-box; text-align: center">
     WKU Dormitory Management System Tool Bar
     </label>
 
@@ -12,7 +12,7 @@
     
     <view bindtap="qrcode" class="qrcodeBtn">
     <image src="../../../icons/qrcode.png" style="position: static; width: 120rpx; height: 120rpx; justify-content: center; display: inline-block; box-sizing: border-box"></image>
-    <text class="qrcodeText">QrCode</text>
+    <text class="qrcodeText" style="font-family: auto">QrCode</text>
     </view>
 
     <view bindtap='history' class="historyBtn">
